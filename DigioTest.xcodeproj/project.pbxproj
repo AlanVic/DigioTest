@@ -13,6 +13,10 @@
 		DB807E822980401000B35AB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB807E802980401000B35AB3 /* Main.storyboard */; };
 		DB807E842980401100B35AB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB807E832980401100B35AB3 /* Assets.xcassets */; };
 		DB807E872980401100B35AB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB807E852980401100B35AB3 /* LaunchScreen.storyboard */; };
+		DB807E9029832F0B00B35AB3 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB807E8F29832F0B00B35AB3 /* Store.swift */; };
+		DB807E9229832F2600B35AB3 /* Cash.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB807E9129832F2600B35AB3 /* Cash.swift */; };
+		DB807E9429832F4200B35AB3 /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB807E9329832F4200B35AB3 /* Products.swift */; };
+		DB807E9629832F5B00B35AB3 /* Spotlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB807E9529832F5B00B35AB3 /* Spotlight.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		DB807E832980401100B35AB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB807E862980401100B35AB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB807E882980401100B35AB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB807E8F29832F0B00B35AB3 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		DB807E9129832F2600B35AB3 /* Cash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cash.swift; sourceTree = "<group>"; };
+		DB807E9329832F4200B35AB3 /* Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
+		DB807E9529832F5B00B35AB3 /* Spotlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spotlight.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 		DB807E792980401000B35AB3 /* DigioTest */ = {
 			isa = PBXGroup;
 			children = (
+				DB807E8E29832E8600B35AB3 /* Models */,
 				DB807E7A2980401000B35AB3 /* AppDelegate.swift */,
 				DB807E7C2980401000B35AB3 /* SceneDelegate.swift */,
 				DB807E7E2980401000B35AB3 /* ViewController.swift */,
@@ -65,6 +74,17 @@
 				DB807E882980401100B35AB3 /* Info.plist */,
 			);
 			path = DigioTest;
+			sourceTree = "<group>";
+		};
+		DB807E8E29832E8600B35AB3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DB807E8F29832F0B00B35AB3 /* Store.swift */,
+				DB807E9129832F2600B35AB3 /* Cash.swift */,
+				DB807E9329832F4200B35AB3 /* Products.swift */,
+				DB807E9529832F5B00B35AB3 /* Spotlight.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +160,11 @@
 			files = (
 				DB807E7F2980401000B35AB3 /* ViewController.swift in Sources */,
 				DB807E7B2980401000B35AB3 /* AppDelegate.swift in Sources */,
+				DB807E9229832F2600B35AB3 /* Cash.swift in Sources */,
+				DB807E9429832F4200B35AB3 /* Products.swift in Sources */,
 				DB807E7D2980401000B35AB3 /* SceneDelegate.swift in Sources */,
+				DB807E9629832F5B00B35AB3 /* Spotlight.swift in Sources */,
+				DB807E9029832F0B00B35AB3 /* Store.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
