@@ -17,6 +17,9 @@
 		DB807E9229832F2600B35AB3 /* Cash.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB807E9129832F2600B35AB3 /* Cash.swift */; };
 		DB807E9429832F4200B35AB3 /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB807E9329832F4200B35AB3 /* Products.swift */; };
 		DB807E9629832F5B00B35AB3 /* Spotlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB807E9529832F5B00B35AB3 /* Spotlight.swift */; };
+		DBD225712985588D00CD3AFD /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD225702985588D00CD3AFD /* StoreViewController.swift */; };
+		DBD22573298558A600CD3AFD /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD22572298558A600CD3AFD /* StoreView.swift */; };
+		DBD22575298558B200CD3AFD /* StoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD22574298558B200CD3AFD /* StoreViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		DB807E9129832F2600B35AB3 /* Cash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cash.swift; sourceTree = "<group>"; };
 		DB807E9329832F4200B35AB3 /* Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
 		DB807E9529832F5B00B35AB3 /* Spotlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spotlight.swift; sourceTree = "<group>"; };
+		DBD225702985588D00CD3AFD /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
+		DBD22572298558A600CD3AFD /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
+		DBD22574298558B200CD3AFD /* StoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +70,7 @@
 		DB807E792980401000B35AB3 /* DigioTest */ = {
 			isa = PBXGroup;
 			children = (
-				DB807E8E29832E8600B35AB3 /* Models */,
+				DBD2256C298557C200CD3AFD /* Features */,
 				DB807E7A2980401000B35AB3 /* AppDelegate.swift */,
 				DB807E7C2980401000B35AB3 /* SceneDelegate.swift */,
 				DB807E7E2980401000B35AB3 /* ViewController.swift */,
@@ -85,6 +91,25 @@
 				DB807E9529832F5B00B35AB3 /* Spotlight.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		DBD2256C298557C200CD3AFD /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				DBD2256D298557D800CD3AFD /* Store */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		DBD2256D298557D800CD3AFD /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				DB807E8E29832E8600B35AB3 /* Models */,
+				DBD225702985588D00CD3AFD /* StoreViewController.swift */,
+				DBD22572298558A600CD3AFD /* StoreView.swift */,
+				DBD22574298558B200CD3AFD /* StoreViewModel.swift */,
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,12 +206,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBD225712985588D00CD3AFD /* StoreViewController.swift in Sources */,
 				DB807E7F2980401000B35AB3 /* ViewController.swift in Sources */,
 				DB807E7B2980401000B35AB3 /* AppDelegate.swift in Sources */,
 				DB807E9229832F2600B35AB3 /* Cash.swift in Sources */,
 				DB807E9429832F4200B35AB3 /* Products.swift in Sources */,
 				DB807E7D2980401000B35AB3 /* SceneDelegate.swift in Sources */,
 				DB807E9629832F5B00B35AB3 /* Spotlight.swift in Sources */,
+				DBD22573298558A600CD3AFD /* StoreView.swift in Sources */,
+				DBD22575298558B200CD3AFD /* StoreViewModel.swift in Sources */,
 				DB807E9029832F0B00B35AB3 /* Store.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
