@@ -12,4 +12,8 @@ struct ProductsViewModel {
 	init(products: [Product]) {
 		self.products = products
 	}
+
+	func numberOfItems -> Int {
+		return products.count
+	}
 }

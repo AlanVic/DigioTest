@@ -10,7 +10,11 @@ import UIKit
 class ProductView: UIView, ConfigurableView {
 
 	lazy var collectionView: UICollectionView = {
-		let collection = UICollectionView(frame: .zero)
+		let layout = UICollectionViewFlowLayout()
+		layout.scrollDirection = .horizontal
+		layout.minimumLineSpacing = 8
+		layout.minimumInteritemSpacing = 8
+		let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
 		collection.translatesAutoresizingMaskIntoConstraints = false
 		collection.backgroundColor = .red
 		return collection
@@ -23,6 +27,8 @@ class ProductView: UIView, ConfigurableView {
 	init(frame: CGRect, viewModel: ProductsViewModel) {
 		self.viewModel = viewModel
 		super.init(frame: frame)
+		setupView()
+		setupCollection()
 	}
 
 	required init?(coder: NSCoder) {
@@ -40,5 +46,23 @@ class ProductView: UIView, ConfigurableView {
 			collectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
 			collectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
 		])
+	}
+
+	func setupCollection() {
+		collectionView.register(RoundableCollectionViewCell.self, forCellWithReuseIdentifier: "productCell")
+	}
+}
+
+extension ProductView: UICollectionViewDataSource {
+	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+		guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "productCell",
+															for: indexPath) as? RoundableCollectionViewCell {
+			return UICollectionViewCell()
+		}
+
+	}
+
+	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+		return viewModel.numberOfItems()
 	}
 }

@@ -38,7 +38,7 @@ class StoreView: UIView, ConfigurableView {
 	func setupConstraints() {
 		NSLayoutConstraint.activate([
 			productView.topAnchor.constraint(equalTo: self.topAnchor),
-			productView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+			product8View.leadingAnchor.constraint(equalTo: self.leadingAnchor),
 			productView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
 			productView.heightAnchor.constraint(equalToConstant: 100)
 		])
