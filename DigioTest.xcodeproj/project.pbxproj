@@ -157,7 +157,8 @@
 /* Begin PBXShellScriptBuildPhase section */
 		DB807E972983332A00B35AB3 /* Lint Sources */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			alwaysOutOfDate = 1;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
