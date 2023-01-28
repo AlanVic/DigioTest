@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB6C3EEC2985752700F2F286 /* SpotlightViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C3EEB2985752700F2F286 /* SpotlightViewModel.swift */; };
+		DB6C3EEE2985753B00F2F286 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C3EED2985753B00F2F286 /* ProductViewModel.swift */; };
+		DB6C3EF02985754F00F2F286 /* CashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C3EEF2985754F00F2F286 /* CashViewModel.swift */; };
+		DB6C3EF32985772000F2F286 /* SpotlightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C3EF22985772000F2F286 /* SpotlightView.swift */; };
+		DB6C3EF62985773600F2F286 /* CashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C3EF52985773600F2F286 /* CashView.swift */; };
+		DB6C3EF92985775D00F2F286 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C3EF82985775D00F2F286 /* ProductView.swift */; };
 		DB807E7B2980401000B35AB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB807E7A2980401000B35AB3 /* AppDelegate.swift */; };
 		DB807E7D2980401000B35AB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB807E7C2980401000B35AB3 /* SceneDelegate.swift */; };
 		DB807E7F2980401000B35AB3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB807E7E2980401000B35AB3 /* ViewController.swift */; };
@@ -20,9 +26,16 @@
 		DBD225712985588D00CD3AFD /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD225702985588D00CD3AFD /* StoreViewController.swift */; };
 		DBD22573298558A600CD3AFD /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD22572298558A600CD3AFD /* StoreView.swift */; };
 		DBD22575298558B200CD3AFD /* StoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD22574298558B200CD3AFD /* StoreViewModel.swift */; };
+		DBD225792985594500CD3AFD /* ConfigurableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD225782985594500CD3AFD /* ConfigurableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB6C3EEB2985752700F2F286 /* SpotlightViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SpotlightViewModel.swift; path = DigioTest/Features/Store/Spotlight/SpotlightViewModel.swift; sourceTree = SOURCE_ROOT; };
+		DB6C3EED2985753B00F2F286 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
+		DB6C3EEF2985754F00F2F286 /* CashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashViewModel.swift; sourceTree = "<group>"; };
+		DB6C3EF22985772000F2F286 /* SpotlightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightView.swift; sourceTree = "<group>"; };
+		DB6C3EF52985773600F2F286 /* CashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashView.swift; sourceTree = "<group>"; };
+		DB6C3EF82985775D00F2F286 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
 		DB807E772980401000B35AB3 /* DigioTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigioTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB807E7A2980401000B35AB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB807E7C2980401000B35AB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +51,7 @@
 		DBD225702985588D00CD3AFD /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		DBD22572298558A600CD3AFD /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
 		DBD22574298558B200CD3AFD /* StoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewModel.swift; sourceTree = "<group>"; };
+		DBD225782985594500CD3AFD /* ConfigurableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +65,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB6C3EF12985770700F2F286 /* Spotlight */ = {
+			isa = PBXGroup;
+			children = (
+				DB6C3EEB2985752700F2F286 /* SpotlightViewModel.swift */,
+				DB6C3EF22985772000F2F286 /* SpotlightView.swift */,
+			);
+			path = Spotlight;
+			sourceTree = "<group>";
+		};
+		DB6C3EF42985772600F2F286 /* Cash */ = {
+			isa = PBXGroup;
+			children = (
+				DB6C3EEF2985754F00F2F286 /* CashViewModel.swift */,
+				DB6C3EF52985773600F2F286 /* CashView.swift */,
+			);
+			path = Cash;
+			sourceTree = "<group>";
+		};
+		DB6C3EF72985774E00F2F286 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				DB6C3EED2985753B00F2F286 /* ProductViewModel.swift */,
+				DB6C3EF82985775D00F2F286 /* ProductView.swift */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
 		DB807E6E2980400F00B35AB3 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +111,7 @@
 		DB807E792980401000B35AB3 /* DigioTest */ = {
 			isa = PBXGroup;
 			children = (
+				DBD225762985590F00CD3AFD /* ReusableLayers */,
 				DBD2256C298557C200CD3AFD /* Features */,
 				DB807E7A2980401000B35AB3 /* AppDelegate.swift */,
 				DB807E7C2980401000B35AB3 /* SceneDelegate.swift */,
@@ -104,12 +146,31 @@
 		DBD2256D298557D800CD3AFD /* Store */ = {
 			isa = PBXGroup;
 			children = (
-				DB807E8E29832E8600B35AB3 /* Models */,
 				DBD225702985588D00CD3AFD /* StoreViewController.swift */,
 				DBD22572298558A600CD3AFD /* StoreView.swift */,
 				DBD22574298558B200CD3AFD /* StoreViewModel.swift */,
+				DB6C3EF72985774E00F2F286 /* Product */,
+				DB6C3EF42985772600F2F286 /* Cash */,
+				DB6C3EF12985770700F2F286 /* Spotlight */,
+				DB807E8E29832E8600B35AB3 /* Models */,
 			);
 			path = Store;
+			sourceTree = "<group>";
+		};
+		DBD225762985590F00CD3AFD /* ReusableLayers */ = {
+			isa = PBXGroup;
+			children = (
+				DBD225772985592700CD3AFD /* Protocols */,
+			);
+			path = ReusableLayers;
+			sourceTree = "<group>";
+		};
+		DBD225772985592700CD3AFD /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DBD225782985594500CD3AFD /* ConfigurableView.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,11 +270,18 @@
 				DBD225712985588D00CD3AFD /* StoreViewController.swift in Sources */,
 				DB807E7F2980401000B35AB3 /* ViewController.swift in Sources */,
 				DB807E7B2980401000B35AB3 /* AppDelegate.swift in Sources */,
+				DB6C3EF62985773600F2F286 /* CashView.swift in Sources */,
+				DB6C3EF92985775D00F2F286 /* ProductView.swift in Sources */,
 				DB807E9229832F2600B35AB3 /* Cash.swift in Sources */,
 				DB807E9429832F4200B35AB3 /* Products.swift in Sources */,
+				DB6C3EEE2985753B00F2F286 /* ProductViewModel.swift in Sources */,
 				DB807E7D2980401000B35AB3 /* SceneDelegate.swift in Sources */,
 				DB807E9629832F5B00B35AB3 /* Spotlight.swift in Sources */,
+				DBD225792985594500CD3AFD /* ConfigurableView.swift in Sources */,
+				DB6C3EF02985754F00F2F286 /* CashViewModel.swift in Sources */,
 				DBD22573298558A600CD3AFD /* StoreView.swift in Sources */,
+				DB6C3EF32985772000F2F286 /* SpotlightView.swift in Sources */,
+				DB6C3EEC2985752700F2F286 /* SpotlightViewModel.swift in Sources */,
 				DBD22575298558B200CD3AFD /* StoreViewModel.swift in Sources */,
 				DB807E9029832F0B00B35AB3 /* Store.swift in Sources */,
 			);
