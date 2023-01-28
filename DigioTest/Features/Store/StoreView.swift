@@ -9,8 +9,19 @@ import UIKit
 
 class StoreView: UIView, ConfigurableView {
 
-	override init(frame: CGRect) {
+	lazy var productView: ProductView = {
+		let view = ProductView(frame: .zero,
+							   viewModel: self.viewModel.getProductViewModel())
+		view.translatesAutoresizingMaskIntoConstraints = false
+		return view
+	}()
+
+	let viewModel: StoreViewModel
+
+
+	init(frame: CGRect, viewModel: StoreViewModel) {
 		super.init(frame: frame)
+		self.viewModel = viewModel
 		self.backgroundColor = .white
 		buildViewHierarchy()
 		setupConstraints()
@@ -21,10 +32,15 @@ class StoreView: UIView, ConfigurableView {
 	}
 
 	func buildViewHierarchy() {
-
+		addSubview(productView)
 	}
 
 	func setupConstraints() {
-
+		NSLayoutConstraint.activate([
+			productView.topAnchor.constraint(equalTo: self.topAnchor),
+			productView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+			productView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+			productView.heightAnchor.constraint(equalToConstant: 100)
+		])
 	}
 }

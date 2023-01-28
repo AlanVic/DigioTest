@@ -13,6 +13,7 @@
 		DB6C3EF32985772000F2F286 /* SpotlightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C3EF22985772000F2F286 /* SpotlightView.swift */; };
 		DB6C3EF62985773600F2F286 /* CashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C3EF52985773600F2F286 /* CashView.swift */; };
 		DB6C3EF92985775D00F2F286 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C3EF82985775D00F2F286 /* ProductView.swift */; };
+		DB6C3EFC29859E8D00F2F286 /* RoundableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C3EFB29859E8D00F2F286 /* RoundableCollectionViewCell.swift */; };
 		DB807E7B2980401000B35AB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB807E7A2980401000B35AB3 /* AppDelegate.swift */; };
 		DB807E7D2980401000B35AB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB807E7C2980401000B35AB3 /* SceneDelegate.swift */; };
 		DB807E7F2980401000B35AB3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB807E7E2980401000B35AB3 /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 		DB6C3EF22985772000F2F286 /* SpotlightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightView.swift; sourceTree = "<group>"; };
 		DB6C3EF52985773600F2F286 /* CashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashView.swift; sourceTree = "<group>"; };
 		DB6C3EF82985775D00F2F286 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
+		DB6C3EFB29859E8D00F2F286 /* RoundableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundableCollectionViewCell.swift; sourceTree = "<group>"; };
 		DB807E772980401000B35AB3 /* DigioTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigioTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB807E7A2980401000B35AB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB807E7C2980401000B35AB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,14 @@
 				DB6C3EF82985775D00F2F286 /* ProductView.swift */,
 			);
 			path = Product;
+			sourceTree = "<group>";
+		};
+		DB6C3EFA29859E6200F2F286 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DB6C3EFB29859E8D00F2F286 /* RoundableCollectionViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		DB807E6E2980400F00B35AB3 = {
@@ -160,6 +170,7 @@
 		DBD225762985590F00CD3AFD /* ReusableLayers */ = {
 			isa = PBXGroup;
 			children = (
+				DB6C3EFA29859E6200F2F286 /* Views */,
 				DBD225772985592700CD3AFD /* Protocols */,
 			);
 			path = ReusableLayers;
@@ -268,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBD225712985588D00CD3AFD /* StoreViewController.swift in Sources */,
+				DB6C3EFC29859E8D00F2F286 /* RoundableCollectionViewCell.swift in Sources */,
 				DB807E7F2980401000B35AB3 /* ViewController.swift in Sources */,
 				DB807E7B2980401000B35AB3 /* AppDelegate.swift in Sources */,
 				DB6C3EF62985773600F2F286 /* CashView.swift in Sources */,

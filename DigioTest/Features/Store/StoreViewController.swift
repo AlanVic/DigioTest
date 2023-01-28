@@ -9,7 +9,7 @@ import UIKit
 
 class StoreViewController: UIViewController {
 
-	let storeView = StoreView()
+	let storeView = StoreView(frame: .zero, viewModel: <#T##StoreViewModel#>)
 
 	override func viewDidLoad() {
 		super.viewDidLoad()

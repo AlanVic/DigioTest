@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct ProductViewModel {
-	private let product: Product
-	init(product: Product) {
-		self.product = product
+struct ProductsViewModel {
+	private let products: [Product]
+	init(products: [Product]) {
+		self.products = products
 	}
 }
