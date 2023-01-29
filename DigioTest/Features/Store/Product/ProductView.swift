@@ -56,13 +56,18 @@ class ProductView: UIView, ConfigurableView {
 extension ProductView: UICollectionViewDataSource {
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "productCell",
-															for: indexPath) as? RoundableCollectionViewCell {
+															for: indexPath) as? RoundableCollectionViewCell,
+				let imageURL = URL(string: "https://s3-sa-east-1.amazonaws.com/digio-exame/xbox_icon.png") else {
 			return UICollectionViewCell()
 		}
+
+		cell.setImageWith(url: imageURL)
+		return cell
 
 	}
 
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return viewModel.numberOfItems()
+		return 5
+//		return viewModel.numberOfItems()
 	}
 }

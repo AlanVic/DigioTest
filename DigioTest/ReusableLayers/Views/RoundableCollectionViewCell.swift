@@ -30,14 +30,14 @@ class RoundableCollectionViewCell: UICollectionViewCell {
 		self.layer.cornerRadius = cornerRadius
 		self.clipsToBounds = true
 
-		self.layer.shadowRadius = 10
+		self.layer.shadowRadius = 8
 		self.layer.shadowOpacity = 1.0
 		self.layer.shadowOffset = CGSize(width: 3, height: 3)
 		self.layer.shadowColor = UIColor.black.cgColor
 	}
 
 
-	public func setImage(image: UIImage) {
-		imageView.image = image
+	public func setImageWith(url: URL) {
+		imageView.downloaded(from: url)
 	}
 }

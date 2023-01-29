@@ -13,7 +13,7 @@ struct ProductsViewModel {
 		self.products = products
 	}
 
-	func numberOfItems -> Int {
+	func numberOfItems() -> Int {
 		return products.count
 	}
 }
