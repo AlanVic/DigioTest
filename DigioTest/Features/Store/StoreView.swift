@@ -20,8 +20,8 @@ class StoreView: UIView, ConfigurableView {
 
 
 	init(frame: CGRect, viewModel: StoreViewModel) {
-		super.init(frame: frame)
 		self.viewModel = viewModel
+		super.init(frame: frame)
 		self.backgroundColor = .white
 		buildViewHierarchy()
 		setupConstraints()
