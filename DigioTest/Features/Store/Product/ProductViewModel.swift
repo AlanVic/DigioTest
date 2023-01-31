@@ -16,4 +16,8 @@ struct ProductsViewModel {
 	func numberOfItems() -> Int {
 		return products.count
 	}
+
+	func imageFromItem(_ indexPath: IndexPath) -> String {
+		return products[indexPath.row].imageURL
+	}
 }

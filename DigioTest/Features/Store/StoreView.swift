@@ -18,7 +18,6 @@ class StoreView: UIView, ConfigurableView {
 
 	let viewModel: StoreViewModel
 
-
 	init(frame: CGRect, viewModel: StoreViewModel) {
 		self.viewModel = viewModel
 		super.init(frame: frame)
@@ -37,9 +36,9 @@ class StoreView: UIView, ConfigurableView {
 
 	func setupConstraints() {
 		NSLayoutConstraint.activate([
-			productView.topAnchor.constraint(equalTo: self.topAnchor),
-			productView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-			productView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+			productView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
+			productView.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor),
+			productView.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor),
 			productView.heightAnchor.constraint(equalToConstant: 100)
 		])
 	}

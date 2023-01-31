@@ -15,6 +15,7 @@
 		DB6C3EF92985775D00F2F286 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C3EF82985775D00F2F286 /* ProductView.swift */; };
 		DB6C3EFC29859E8D00F2F286 /* RoundableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C3EFB29859E8D00F2F286 /* RoundableCollectionViewCell.swift */; };
 		DB6C3EFF2985AFF900F2F286 /* UIImageView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C3EFE2985AFF900F2F286 /* UIImageView + Extension.swift */; };
+		DB6C3F222988591D00F2F286 /* test.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = DB6C3F002986DBE000F2F286 /* test.json */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		DB807E7B2980401000B35AB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB807E7A2980401000B35AB3 /* AppDelegate.swift */; };
 		DB807E7D2980401000B35AB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB807E7C2980401000B35AB3 /* SceneDelegate.swift */; };
 		DB807E842980401100B35AB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB807E832980401100B35AB3 /* Assets.xcassets */; };
@@ -28,6 +29,19 @@
 		DBD22575298558B200CD3AFD /* StoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD22574298558B200CD3AFD /* StoreViewModel.swift */; };
 		DBD225792985594500CD3AFD /* ConfigurableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD225782985594500CD3AFD /* ConfigurableView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DB6C3F212988590B00F2F286 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				DB6C3F222988591D00F2F286 /* test.json in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		DB6C3EEB2985752700F2F286 /* SpotlightViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SpotlightViewModel.swift; path = DigioTest/Features/Store/Spotlight/SpotlightViewModel.swift; sourceTree = SOURCE_ROOT; };
@@ -202,6 +216,7 @@
 				DB807E742980401000B35AB3 /* Frameworks */,
 				DB807E752980401000B35AB3 /* Resources */,
 				DB807E972983332A00B35AB3 /* Lint Sources */,
+				DB6C3F212988590B00F2F286 /* CopyFiles */,
 			);
 			buildRules = (
 			);

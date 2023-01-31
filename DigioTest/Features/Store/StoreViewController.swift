@@ -18,7 +18,7 @@ class StoreViewController: UIViewController {
 				view = StoreView(frame: .zero, viewModel: StoreViewModel(store: store))
 			} catch {
 				view = UIView()
-				view.backgroundColor = .red
+				view.backgroundColor = .green
 			}
 		} else {
 			view = UIView()
@@ -29,6 +29,10 @@ class StoreViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+	}
+
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
 	}
 
 	override func loadView() {

@@ -7,8 +7,8 @@
 
 import UIKit
 
-class RoundableCollectionViewCell: UICollectionViewCell {
-	private let cornerRadius: CGFloat = 8.0
+class RoundableCollectionViewCell: UICollectionViewCell, ConfigurableView {
+	private let cornerRadius: CGFloat = 16.0
 
 	private let imageView: UIImageView = {
 		let imageView = UIImageView()
@@ -16,9 +16,9 @@ class RoundableCollectionViewCell: UICollectionViewCell {
 		return imageView
 	}()
 
-
 	override init(frame: CGRect) {
 		super.init(frame: frame)
+		setupView()
 		setupCell()
 	}
 
@@ -27,15 +27,29 @@ class RoundableCollectionViewCell: UICollectionViewCell {
 	}
 
 	private func setupCell() {
-		self.layer.cornerRadius = cornerRadius
-		self.clipsToBounds = true
+		self.backgroundColor = .white
 
-		self.layer.shadowRadius = 8
-		self.layer.shadowOpacity = 1.0
-		self.layer.shadowOffset = CGSize(width: 3, height: 3)
+		self.layer.cornerRadius = cornerRadius
+		self.clipsToBounds = false
+
+		self.layer.shadowRadius = 2
+		self.layer.shadowOpacity = 0.4
+		self.layer.shadowOffset = CGSize(width: 1, height: 2)
 		self.layer.shadowColor = UIColor.black.cgColor
 	}
 
+	func buildViewHierarchy() {
+		addSubview(imageView)
+	}
+
+	func setupConstraints() {
+		NSLayoutConstraint.activate([
+			imageView.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.5),
+			imageView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.5),
+			imageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+			imageView.centerYAnchor.constraint(equalTo: self.centerYAnchor)
+		])
+	}
 
 	public func setImageWith(url: URL) {
 		imageView.downloaded(from: url)

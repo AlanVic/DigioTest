@@ -12,11 +12,14 @@ class ProductView: UIView, ConfigurableView {
 	lazy var collectionView: UICollectionView = {
 		let layout = UICollectionViewFlowLayout()
 		layout.scrollDirection = .horizontal
-		layout.minimumLineSpacing = 8
-		layout.minimumInteritemSpacing = 8
+		layout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
+		layout.minimumLineSpacing = 16
+		layout.minimumInteritemSpacing = 16
+		layout.estimatedItemSize = .zero
 		let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
 		collection.translatesAutoresizingMaskIntoConstraints = false
-		collection.backgroundColor = .red
+		collection.dataSource = self
+        collection.delegate = self
 		return collection
 	}()
 
@@ -53,11 +56,11 @@ class ProductView: UIView, ConfigurableView {
 	}
 }
 
-extension ProductView: UICollectionViewDataSource {
+extension ProductView: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "productCell",
 															for: indexPath) as? RoundableCollectionViewCell,
-				let imageURL = URL(string: "https://s3-sa-east-1.amazonaws.com/digio-exame/xbox_icon.png") else {
+			  let imageURL = URL(string: viewModel.imageFromItem(indexPath)) else {
 			return UICollectionViewCell()
 		}
 
@@ -67,7 +70,12 @@ extension ProductView: UICollectionViewDataSource {
 	}
 
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return 5
-//		return viewModel.numberOfItems()
+		return viewModel.numberOfItems()
+	}
+
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+		return CGSize(width: collectionView.frame.size.height - 8, height: collectionView.frame.size.height - 8)
 	}
 }
