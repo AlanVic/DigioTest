@@ -9,6 +9,14 @@ import UIKit
 
 class ProductView: UIView, ConfigurableView {
 
+    lazy var titleLabel: UILabel = {
+        let label = UILabel()
+        label.font = .boldSystemFont(ofSize: 20)
+        label.text = self.viewModel.titleProductSection()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+
 	lazy var collectionView: UICollectionView = {
 		let layout = UICollectionViewFlowLayout()
 		layout.scrollDirection = .horizontal
@@ -20,6 +28,7 @@ class ProductView: UIView, ConfigurableView {
 		collection.translatesAutoresizingMaskIntoConstraints = false
 		collection.dataSource = self
         collection.delegate = self
+        collection.showsHorizontalScrollIndicator = false
 		return collection
 	}()
 
@@ -39,12 +48,17 @@ class ProductView: UIView, ConfigurableView {
 	}
 
 	func buildViewHierarchy() {
+        addSubview(titleLabel)
 		addSubview(collectionView)
 	}
 
 	func setupConstraints() {
 		NSLayoutConstraint.activate([
-			collectionView.topAnchor.constraint(equalTo: self.topAnchor),
+            titleLabel.topAnchor.constraint(equalTo: self.topAnchor),
+            titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
+            titleLabel.bottomAnchor.constraint(equalTo: collectionView.topAnchor, constant: -16),
+//            titleLabel.heightAnchor.constraint(equalToConstant: 16),
+
 			collectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
 			collectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
 			collectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor)

@@ -13,11 +13,15 @@ struct ProductsViewModel {
 		self.products = products
 	}
 
-	func numberOfItems() -> Int {
+	public func numberOfItems() -> Int {
 		return products.count
 	}
 
-	func imageFromItem(_ indexPath: IndexPath) -> String {
+	public func imageFromItem(_ indexPath: IndexPath) -> String {
 		return products[indexPath.row].imageURL
 	}
+
+    public func titleProductSection() -> String {
+        return "Produtos"
+    }
 }

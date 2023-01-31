@@ -39,7 +39,7 @@ class StoreView: UIView, ConfigurableView {
 			productView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
 			productView.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor),
 			productView.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor),
-			productView.heightAnchor.constraint(equalToConstant: 100)
+			productView.heightAnchor.constraint(equalToConstant: 180)
 		])
 	}
 }
