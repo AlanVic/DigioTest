@@ -57,7 +57,6 @@ class ProductView: UIView, ConfigurableView {
             titleLabel.topAnchor.constraint(equalTo: self.topAnchor),
             titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
             titleLabel.bottomAnchor.constraint(equalTo: collectionView.topAnchor, constant: -16),
-//            titleLabel.heightAnchor.constraint(equalToConstant: 16),
 
 			collectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
 			collectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
@@ -79,6 +78,7 @@ extension ProductView: UICollectionViewDataSource, UICollectionViewDelegateFlowL
 		}
 
 		cell.setImageWith(url: imageURL)
+        cell.setTypeCell(.icon)
 		return cell
 
 	}

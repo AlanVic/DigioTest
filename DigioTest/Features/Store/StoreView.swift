@@ -9,6 +9,12 @@ import UIKit
 
 class StoreView: UIView, ConfigurableView {
 
+    lazy var spotlightView: SpotlightView = {
+        let view = SpotlightView(frame: .zero, viewModel: self.viewModel.getSpotlightViewModel())
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+
 	lazy var productView: ProductView = {
 		let view = ProductView(frame: .zero,
 							   viewModel: self.viewModel.getProductViewModel())
@@ -31,12 +37,18 @@ class StoreView: UIView, ConfigurableView {
 	}
 
 	func buildViewHierarchy() {
+        addSubview(spotlightView)
 		addSubview(productView)
 	}
 
 	func setupConstraints() {
 		NSLayoutConstraint.activate([
-			productView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
+            spotlightView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
+            spotlightView.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor),
+            spotlightView.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor),
+            spotlightView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.width * viewModel.factorHeightSize()),
+
+            productView.topAnchor.constraint(equalTo: spotlightView.bottomAnchor, constant: 32),
 			productView.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor),
 			productView.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor),
 			productView.heightAnchor.constraint(equalToConstant: 180)

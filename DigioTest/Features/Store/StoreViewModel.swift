@@ -8,6 +8,9 @@
 import Foundation
 
 class StoreViewModel {
+    private let imageWidthSpotlight: CGFloat = 670
+    private let imageHeightSpotlight: CGFloat = 320
+
 	private let store: Store
 	init(store: Store) {
 		self.store = store
@@ -16,4 +19,12 @@ class StoreViewModel {
 	public func getProductViewModel() -> ProductsViewModel {
 		return ProductsViewModel(products: store.products)
 	}
+
+    public func getSpotlightViewModel() -> SpotlightViewModel {
+        return SpotlightViewModel(spotlights: store.spotlight)
+    }
+
+    public func factorHeightSize() -> CGFloat {
+        return imageHeightSpotlight / imageWidthSpotlight
+    }
 }

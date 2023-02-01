@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB380CF22989AC52003AA27C /* TypeRoundableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB380CF12989AC52003AA27C /* TypeRoundableCell.swift */; };
+		DB380CF4298A9291003AA27C /* NSLayoutConstraint + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB380CF3298A9291003AA27C /* NSLayoutConstraint + Extension.swift */; };
 		DB6C3EEC2985752700F2F286 /* SpotlightViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C3EEB2985752700F2F286 /* SpotlightViewModel.swift */; };
 		DB6C3EEE2985753B00F2F286 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C3EED2985753B00F2F286 /* ProductViewModel.swift */; };
 		DB6C3EF02985754F00F2F286 /* CashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C3EEF2985754F00F2F286 /* CashViewModel.swift */; };
@@ -44,6 +46,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DB380CF12989AC52003AA27C /* TypeRoundableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeRoundableCell.swift; sourceTree = "<group>"; };
+		DB380CF3298A9291003AA27C /* NSLayoutConstraint + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint + Extension.swift"; sourceTree = "<group>"; };
 		DB6C3EEB2985752700F2F286 /* SpotlightViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SpotlightViewModel.swift; path = DigioTest/Features/Store/Spotlight/SpotlightViewModel.swift; sourceTree = SOURCE_ROOT; };
 		DB6C3EED2985753B00F2F286 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		DB6C3EEF2985754F00F2F286 /* CashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashViewModel.swift; sourceTree = "<group>"; };
@@ -80,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB380CF02989AC3A003AA27C /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				DB380CF12989AC52003AA27C /* TypeRoundableCell.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		DB6C3EF12985770700F2F286 /* Spotlight */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				DB6C3EFE2985AFF900F2F286 /* UIImageView + Extension.swift */,
+				DB380CF3298A9291003AA27C /* NSLayoutConstraint + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -190,6 +203,7 @@
 		DBD225762985590F00CD3AFD /* ReusableLayers */ = {
 			isa = PBXGroup;
 			children = (
+				DB380CF02989AC3A003AA27C /* Enums */,
 				DB6C3EFD2985AFE500F2F286 /* Extensions */,
 				DB6C3EFA29859E6200F2F286 /* Views */,
 				DBD225772985592700CD3AFD /* Protocols */,
@@ -299,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB380CF22989AC52003AA27C /* TypeRoundableCell.swift in Sources */,
 				DBD225712985588D00CD3AFD /* StoreViewController.swift in Sources */,
 				DB6C3EFC29859E8D00F2F286 /* RoundableCollectionViewCell.swift in Sources */,
 				DB807E7B2980401000B35AB3 /* AppDelegate.swift in Sources */,
@@ -317,6 +332,7 @@
 				DB6C3EEC2985752700F2F286 /* SpotlightViewModel.swift in Sources */,
 				DBD22575298558B200CD3AFD /* StoreViewModel.swift in Sources */,
 				DB807E9029832F0B00B35AB3 /* Store.swift in Sources */,
+				DB380CF4298A9291003AA27C /* NSLayoutConstraint + Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

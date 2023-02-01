@@ -8,8 +8,16 @@
 import Foundation
 
 struct SpotlightViewModel {
-	private let spotlight: Spotlight
-	init(spotlight: Spotlight) {
-		self.spotlight = spotlight
+	private let spotlights: [Spotlight]
+	init(spotlights: [Spotlight]) {
+		self.spotlights = spotlights
 	}
+
+    public func imageFromItem(_ indexPath: IndexPath) -> String {
+        return spotlights[indexPath.row].bannerURL
+    }
+
+    public func numberOfItems() -> Int {
+        return spotlights.count
+    }
 }

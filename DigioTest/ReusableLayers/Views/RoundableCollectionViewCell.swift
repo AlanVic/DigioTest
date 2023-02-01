@@ -12,14 +12,17 @@ class RoundableCollectionViewCell: UICollectionViewCell, ConfigurableView {
 
 	private let imageView: UIImageView = {
 		let imageView = UIImageView()
-		imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.translatesAutoresizingMaskIntoConstraints = false
 		return imageView
 	}()
 
+    lazy var heightImageConstraint = imageView.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 1)
+    lazy var widthImageConstraint = imageView.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 1)
+
 	override init(frame: CGRect) {
 		super.init(frame: frame)
-		setupView()
-		setupCell()
+        setupCell()
+        setupView()
 	}
 
 	required init?(coder: NSCoder) {
@@ -27,31 +30,52 @@ class RoundableCollectionViewCell: UICollectionViewCell, ConfigurableView {
 	}
 
 	private func setupCell() {
-		self.backgroundColor = .white
+//		self.backgroundColor = .blue
+        self.contentView.backgroundColor = .white
+        contentView.layer.cornerRadius = cornerRadius
+        imageView.clipsToBounds = true
+        contentView.layer.masksToBounds = false
 
-		self.layer.cornerRadius = cornerRadius
-		self.clipsToBounds = false
-
-		self.layer.shadowRadius = 2
-		self.layer.shadowOpacity = 0.4
-		self.layer.shadowOffset = CGSize(width: 1, height: 2)
-		self.layer.shadowColor = UIColor.black.cgColor
+        contentView.layer.shadowRadius = 2
+        contentView.layer.shadowOpacity = 0.4
+        contentView.layer.shadowOffset = CGSize(width: 1, height: 2)
+        contentView.layer.shadowColor = UIColor.black.cgColor
 	}
 
 	func buildViewHierarchy() {
-		addSubview(imageView)
+        contentView.addSubview(imageView)
 	}
 
 	func setupConstraints() {
 		NSLayoutConstraint.activate([
-			imageView.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.5),
-			imageView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.5),
-			imageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-			imageView.centerYAnchor.constraint(equalTo: self.centerYAnchor)
+            heightImageConstraint,
+            widthImageConstraint,
+			imageView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+			imageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
 		])
 	}
 
 	public func setImageWith(url: URL) {
-		imageView.downloaded(from: url)
+        imageView.downloaded(from: url, contentMode: .scaleAspectFill)
 	}
+
+    public func setTypeCell(_ typeCell: TypeRoundableCell) {
+        switch typeCell {
+        case .icon:
+            let heightConstraintUpdate = heightImageConstraint.constraintWithMultiplier(0.4)
+            contentView.removeConstraint(heightImageConstraint)
+            contentView.addConstraint(heightConstraintUpdate)
+            let widthConstraintUpdate = widthImageConstraint.constraintWithMultiplier(0.4)
+            contentView.removeConstraint(widthImageConstraint)
+            contentView.addConstraint(widthConstraintUpdate)
+            contentView.layoutIfNeeded()
+            heightImageConstraint = heightConstraintUpdate
+            widthImageConstraint = widthConstraintUpdate
+            imageView.contentMode = .scaleAspectFit
+        case .banner:
+            imageView.layer.cornerRadius = cornerRadius
+            imageView.contentMode = .scaleAspectFill
+        }
+        imageView.layoutIfNeeded()
+    }
 }
